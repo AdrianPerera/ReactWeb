@@ -52,16 +52,12 @@ const mapStateToProps = (state, ownProps) => {
     }
 };
 
-const mapActionsToProps = (dispatch, props) => {
-    console.log("mapActionsToProps" ,props)
+const mapActionsToProps = (dispatch) => {
     return bindActionCreators({
         onUpdateUser: updateUser
     }, dispatch);
 }
 
-const mergeProps = (propsFromState, propsFromDispatch, ownProps) =>{
-    console.log(propsFromState, propsFromDispatch, ownProps);
-    return {}
-}
 
-export default connect(mapStateToProps, mapActionsToProps,mergeProps)(App);
+
+export default connect(mapStateToProps, mapActionsToProps)(App);
